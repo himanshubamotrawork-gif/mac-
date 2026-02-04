@@ -1,33 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get $750 M·A·C Cosmetics Gift Card</title>
+  <title>Get $750 Mac Cosmetics Gift Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HNYLQQJHC6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- 🔧 DEBUG TOGGLE -->
-  <script>
-    // Set true for testing, false for production
-    const GA_DEBUG = true;
-    // Optional: auto-debug via ?debug=1
-    // const GA_DEBUG = window.location.search.includes('debug=1');
-  </script>
-
-  <!-- Google Analytics (EXISTING PROPERTY) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNYLQQJHC6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-HNYLQQJHC6', {
-      debug_mode: GA_DEBUG
-    });
-  </script>
-
-  <style>
+  gtag('config', 'G-HNYLQQJHC6' , {
+  debug_mode: false
+  });
+</script>
+   <style>
     :root {
       --bg: #ffffff;
       --text: #000000;
@@ -161,90 +151,101 @@
 
 <body>
 
-  <!-- Desktop Warning -->
   <div id="desktop-message">
     <h2>⚠️ Mobile Device Required</h2>
-    <p>Please open this page on your mobile phone to continue.</p>
+    <p>Please visit this page using a mobile phone to continue.</p>
   </div>
 
-  <!-- Mobile Content -->
   <div id="mobile-content">
     <div class="container">
 
-      <div class="brand">M·A·C</div>
+      <div class="brand">Mac Cosmetics</div>
 
       <div class="card-wrap">
         <div class="card-mask">
-          <img src="mac-giftcard.png" alt="MAC Cosmetics Gift Card">
+          <img src="Mac-giftcard.png" alt="Mac Gift Card">
         </div>
       </div>
 
-      <h1>Get $750 M·A·C Gift Card</h1>
-      <p class="sub">Complete simple steps & unlock your beauty reward</p>
+      <h1>Get <span>$750 Mac cosmetics Gift Card</span></h1>
+      <p class="sub">
+        
+      </p>
 
-      <!-- TOP CTA -->
-      <button class="cta" onclick="redirect('top_cta')">Start Now</button>
+      <button class="cta" onclick="redirect()">Start Now</button>
 
       <div class="how">
         <h2>How It Works</h2>
 
         <div class="step">
           <div class="num">1</div>
-          <div><strong>Tap to Start</strong><br>Begin your reward journey</div>
+          <div>
+            <strong>Click to Start</strong>
+            <span>Tap the button above to begin your reward journey</span>
+          </div>
         </div>
 
         <div class="step">
           <div class="num">2</div>
-          <div><strong>Enter Email</strong><br>Use a valid email address</div>
+          <div>
+            <strong>Enter Your Info</strong>
+            <span>Enter a valid email ID</span>
+          </div>
         </div>
 
         <div class="step">
           <div class="num">3</div>
-          <div><strong>Complete Offers</strong><br>2–5 quick offers (no payment)</div>
+          <div>
+            <strong>Complete Offers</strong>
+            <span>Complete 4 to 5 offers</span>
+          </div>
         </div>
 
         <div class="step">
           <div class="num">4</div>
-          <div><strong>Get Reward</strong><br>Gift card delivered within 24 hours</div>
+          <div>
+            <strong>Receive Your Reward</strong>
+            <span>Get your Mac cosmetics gift card within 24 hours</span>
+          </div>
         </div>
 
-        <!-- BOTTOM CTA -->
         <div class="final-cta">
-          <button class="cta" onclick="redirect('bottom_cta')">
-            Claim Your M·A·C Gift Card
-          </button>
+          <button class="cta" onclick="redirect()">Claim Your Mac Cosmetics Gift Card</button>
         </div>
+      </div>
+
+      <div class="footer">
       </div>
 
     </div>
   </div>
-
   <script>
-    let clicked = false;
+let clicked = false;
 
-    function redirect(cta_position) {
-      if (clicked) return;
-      clicked = true;
+function redirect() {
+  if (clicked) return;
+  clicked = true;
+if (typeof gtag === 'function') {
+  
+gtag('event', 'start_now_click', {
+  event_category: 'CTA',
+  event_label: 'Skims Gift Card',
+  transport_type: 'beacon'
+});
+}
+  setTimeout(function () {
+    window.location.href = "https://trkfy.org/aff_c?offer_id=113&aff_id=17763";
+  }, 900);
+}
 
-      gtag('event', 'mac_cta_click', {
-        event_category: 'CTA',
-        event_label: cta_position,
-        debug_mode: GA_DEBUG
-      });
+  (function () {
+    var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
 
-      setTimeout(() => {
-        window.location.href = "https://trkfy.org/aff_c?offer_id=1149&aff_id=17763";
-      }, 800);
+    if (!isMobile) {
+      document.getElementById("mobile-content").style.display = "none";
+      document.getElementById("desktop-message").style.display = "block";
     }
-
-    (function () {
-      const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
-      if (!isMobile) {
-        document.getElementById("mobile-content").style.display = "none";
-        document.getElementById("desktop-message").style.display = "block";
-      }
-    })();
-  </script>
-
+  })();
+</script>
 </body>
 </html>
